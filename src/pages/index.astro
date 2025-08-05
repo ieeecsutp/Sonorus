@@ -1,12 +1,30 @@
 ---
-import Header from "../components/Header.astro"
-import Main from "../components/Main.astro"
-import Footer from "../components/Footer.astro"
-import Layout from "../layouts/Layout.astro"
+import Header from "../components/Header.astro";
+import Main from "../components/Main.astro";
+import Footer from "../components/Footer.astro";
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Sonorus">
-	<Header/>
-	<Main/>
-	<Footer/>
+  <Header />
+  <Main />
+  <Footer />
+  <script>
+    /* Código para Menú */
+    const menu = document.getElementById("menu") as HTMLImageElement;
+    const dropmenu = document.getElementById("dropmenu");
+
+    menu?.addEventListener("click", () => {
+      const isHidden = dropmenu?.classList.toggle("hidden");
+      menu.src = isHidden ? "/menu.svg" : "/close.svg";
+    });
+
+    const links = document.querySelectorAll("nav a");
+    links.forEach((link) => {
+      link.addEventListener("click", () => {
+        dropmenu?.classList.add("hidden");
+        menu.src = "/menu.svg";
+      });
+    });
+  </script>
 </Layout>
