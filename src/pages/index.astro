@@ -28,61 +28,58 @@ import Layout from "../layouts/Layout.astro";
     });
     /* JS Leonard para carrusel*/
     // Carrusel funcionalidad
-const images = [
-  { src: '/Nirvana.png', alt: 'Nirvana' },
-  { src: '/bocanada 3.png', alt: 'Bocanada' },
-  { src: '/red hot chili peppers poster.png', alt: 'Red Hot Chili Peppers' },
-  { src: '/Vilma Palma e Vampiros 1.png', alt: 'Vilma Palma' },
-  { src: '/Twenty One Pilots Clancy - Poster.png', alt: 'top' },
-  { src: '/los prisioneros.png', alt: 'los prisioneros' },
-];
+    const images = [
+      { src: "/album_1.webp", alt: "Nirvana" },
+      { src: "/album_2.webp", alt: "Bocanada" },
+      { src: "/album_3.webp", alt: "Red Hot Chili Peppers" },
+      { src: "/album_4.webp", alt: "Vilma Palma" },
+      { src: "/album_5.webp", alt: "top" },
+      { src: "/album_6.webp", alt: "los prisioneros" },
+      { src: "/album_7.webp", alt: "hombres g" },
+    ];
 
-let currentIndex = 0;
+    let currentIndex = 0;
 
+    const carousel = document.getElementById("carousel");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-const carousel = document.getElementById('carousel');
-const prevBtn = document.getElementById('prevBtn');
-const nextBtn = document.getElementById('nextBtn');
+    // Renderiza todas las imágenes en línea, pero solo se ven dos a la vez gracias al overflow-hidden del contenedor
+    function renderCarousel() {
+      carousel.innerHTML = "";
+      images.forEach((imgData) => {
+        const img = document.createElement("img");
+        img.src = imgData.src;
+        img.alt = imgData.alt;
+        img.className = "rounded-lg shadow-lg object-cover flex-shrink-0";
+        img.style.width = "140px";
+        img.style.height = "197px";
+        carousel.appendChild(img);
+      });
+      updateTransform();
+    }
 
-// Renderiza todas las imágenes en línea, pero solo se ven dos a la vez gracias al overflow-hidden del contenedor
-function renderCarousel() {
-  carousel.innerHTML = '';
-  images.forEach((imgData) => {
-    const img = document.createElement('img');
-    img.src = imgData.src;
-    img.alt = imgData.alt;
-    img.className = 'rounded-lg shadow-lg object-cover flex-shrink-0';
-    img.style.width = '140px';
-    img.style.height = '197px';
-    carousel.appendChild(img);
-  });
-  updateTransform();
-}
+    function updateTransform() {
+      // 140px (ancho) + 16px (gap-4) = 156px por imagen
+      const offset = currentIndex * 156;
+      carousel.style.transform = `translateX(-${offset}px)`;
+    }
 
-function updateTransform() {
-  // 140px (ancho) + 16px (gap-4) = 156px por imagen
-  const offset = currentIndex * 156;
-  carousel.style.transform = `translateX(-${offset}px)`;
-}
+    prevBtn.addEventListener("click", () => {
+      if (currentIndex - 2 >= 0) {
+        currentIndex -= 2;
+        updateTransform();
+      }
+    });
 
-prevBtn.addEventListener('click', () => {
-  if (currentIndex - 2 >= 0) {
-    currentIndex -= 2;
-    updateTransform();
-  }
-});
+    nextBtn.addEventListener("click", () => {
+      if (currentIndex + 2 < images.length) {
+        currentIndex += 2;
+        updateTransform();
+      }
+    });
 
-nextBtn.addEventListener('click', () => {
-  if (currentIndex + 2 < images.length) {
-    currentIndex += 2;
-    updateTransform();
-  }
-});
-
-// Inicializar carrusel
-renderCarousel();
-
-
-
+    // Inicializar carrusel
+    renderCarousel();
   </script>
 </Layout>

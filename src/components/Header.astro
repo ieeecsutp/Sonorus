@@ -7,39 +7,42 @@
   class="bg-black text-white flex w-full justify-between lg:px-24"
   id="inicio"
 >
-  <!-- Mobile Version -->
-  <div class="relative w-full flex items-center justify-between px-4 py-2">
-    <!-- Logo -->
-    <a href="#inicio" class="font-h flex items-center font-bold text-2xl">
-      <img src="/logo.webp" alt="Logo" class="h-15 w-auto" />
-      Sonorus
-    </a>
+  <div class="container mx-auto flex flex-row w-full">
+    <!-- Mobile Version -->
+    <div class="relative w-full flex items-center justify-between px-4 py-2">
+      <!-- Logo -->
+      <a href="#inicio" class="font-h flex items-center font-bold text-2xl">
+        <img src="/logo.webp" alt="Logo" class="h-15 w-auto" />
+        Sonorus
+      </a>
 
-    <!-- Menu Mobile -->
-    <img
-      src="/menu.svg"
-      alt="menu"
-      class="h-8 cursor-pointer md:hidden"
-      id="menu"
-    />
-    <nav
-      class="absolute top-full left-0 w-full bg-black hidden md:hidden"
-      id="dropmenu"
-    >
-      <ul class="text-center space-y-4 py-4">
+      <!-- Menu Mobile -->
+      <img
+        src="/menu.svg"
+        alt="menu"
+        class="h-8 cursor-pointer md:hidden"
+        id="menu"
+      />
+      <nav
+        class="absolute top-full left-0 w-full bg-black hidden md:hidden"
+        id="dropmenu"
+      >
+        <ul class="text-center space-y-4 py-4">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#queessonorus">¿Que es Sonorus?</a></li>
+          <li><a href="#funcionalidades">Funcionalidades</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Desktop Version -->
+
+    <nav class="hidden md:flex items-center justify-end w-full px-6">
+      <ul class="flex gap-5">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#queessonorus">¿Que es Sonorus?</a></li>
         <li><a href="#funcionalidades">Funcionalidades</a></li>
       </ul>
     </nav>
   </div>
-
-  <!-- Desktop Version -->
-  <nav class="hidden md:flex items-center justify-end w-full px-6">
-    <ul class="flex gap-5">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#queessonorus">¿Que es Sonorus?</a></li>
-      <li><a href="#funcionalidades">Funcionalidades</a></li>
-    </ul>
-  </nav>
 </header>
