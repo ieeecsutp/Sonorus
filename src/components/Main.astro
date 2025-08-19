@@ -1,13 +1,14 @@
 ---
-
+import Funcion from "../components/Funcion.astro";
 ---
 
-<!-- Aqui empezar trabajo de Piero -->
+<!-- Trabajo de Piero -->
 <section
   class="h-[400px] md:h-[600px] bg-gradient-to-br from-[#831011] via-[#300000] to-[#831011] w-full"
+  id="inicio"
 >
   <div
-    class="flex justify-center items-center h-full md:items-start flex-col gap-5 text-white text-center md:text-left px-10 md:px-30 container mx-auto"
+    class="flex justify-center items-center h-full md:items-start flex-col gap-5 text-white text-center md:text-left px-10 md:px-20 lg:px-48 container mx-auto"
   >
     <h1 class="font-h font-bold text-4xl md:text-8xl italic">Sonorus</h1>
     <p class="font-p font-light">
@@ -21,134 +22,99 @@
         src="/iconForButton.svg"
         alt="icono"
         class="w-auto h-5 transition-transform duration-300"
+        loading="lazy"
       />
     </button>
   </div>
 </section>
 
-<!-- Aquí continuar trabajo de Angel -->
+<!-- Trabajo de Angel -->
+<section class="bg-black" id="queessonorus">
+  <div
+    class="flex flex-col justify-center items-center container mx-auto px-[36px] py-[28px] md:px-20 lg:px-48 bg-black text-white"
+  >
+    <!-- ¿QUÉ ES SONORUS? -->
+    <article
+      class="py-10 flex flex-col xl:flex-row justify-center items-center gap-12"
+    >
+      <!-- Álbumes -->
+      <img src="/albumes.webp" alt="albumes" loading="lazy" />
+      <!-- Texto -->
+      <section
+        class="w-full xl:w-1/2 flex flex-col gap-8 text-center xl:text-left"
+      >
+        <h2 class="text-4xl sm:text-5xl font-bold font-h">
+          ¿Qué es <span class="text-red-600">Sonorus</span>?
+        </h2>
 
-
-
-
-
-<section class=" bg-black">
-
-  <section class= "flex flex-col justify-center items-center container mx-auto bg-black text-white  ">
-  
-
-    <article class="flex flex-row justify-center items-center px-32 py-16 gap-32">
-
-      <section class="w-1/2 flex flex-cols-2 gap-4 max-h-250 overflow-hidden">
-        <section class="flex flex-col space-y-4">
-          <img src="/album_4.webp" class="w-full h-auto"/>
-          <img src="/album_1.webp" class="w-full h-auto"/>
-          <img src="/album_6.webp" class="w-full h-auto"/> 
-        </section>
-
-        <section class="flex flex-col space-y-4">
-          <img src="/album_7.webp" class="w-full h-auto"/>
-          <img src="/album_2.webp" class="w-full h-auto"/>
-          <img src="/album_3.webp" class="w-full h-auto"/>       
-        </section>
+        <p
+          class="text-base sm:text-lg font-light font-p text-justify leading-relaxed"
+        >
+          <strong class="font-semibold"
+            >Más que música, conexiones reales.</strong
+          >
+          En un mundo donde cada uno escucha con audífonos, Sonorus propone quitar
+          los auriculares y abrir el alma. Nuestra plataforma no solo te conecta
+          con canciones, sino con personas que las sienten como tú. Explora nuevos
+          géneros, comparte tus playlists favoritas, conoce personas que vibran con
+          las mismas emociones sonoras y forma parte de una comunidad donde la música
+          es el idioma común. Porque tus gustos no son algoritmos: son reflejos de
+          quién eres.
+        </p>
       </section>
+    </article>
 
-      <section class="w-1/2 flex flex-col justify-center items-center overflow-hidden" >
-        <section class="w-full">
-          <h2 class="font-h text-center text-5xl p-4 ">¿Qué es <strong class="font-normal text-red-600 whitespace-normal break-words">Sonorus?</strong></h2>
-        </section>
+    <!-- FUNCIONALIDADES -->
 
-        <p class="font-p font-light text-justify ">
-          <strong class="font-bold">Más que música, conexiones reales.</strong> En un mundo donde cada
-          uno escucha con audifonos. Sonorus propone quitar los auriculares y abrir
-          el alma. Nuestra plataforma no solo te conecta con canciones, sinó con personas
-          que lo sienten como tú. Explora nuevos géneros, comparte nuevos playlist
-          favoritos, conoce personas que vibran con las mismas emociones sonoras y
-          forma parte de una comunidad donde la música es el idioma común. Porque tus
-          gustos no son algoritmos: son reflejos de quién eres.
+    <article id="funcionalidades">
+      <!-- Título de funcionalidades -->
+      <section class="text-center md:px-30 pt-8 pb-5">
+        <h2 class="font-h text-4xl md:text-5xl">Funcionalidades</h2>
+
+        <p class="font-h text-2xl">
+          Conecta, comparte y experimenta la música de manera diferente
         </p>
       </section>
 
-    </article>
+      <!-- Detalle de funcion -->
+      <section class="grid grid-cols-1 md:grid-cols-2 gap-3">
+        <Funcion
+          titulo="1. Perfiles musicales personalizados"
+          descripcion="Crea tu perfil, selecciona tus géneros, artistas y canciones favoritas. Haz visible tu personalidad a través de tu música."
+        />
 
+        <Funcion
+          titulo="2. Creación y descubrimiento de playlists"
+          descripcion="Arma tus propias playlists, decúbrelas hechas por otros usuarios y compártelos con la comunidad."
+        />
 
+        <Funcion
+          titulo="3. Recomendaciones humanas"
+          descripcion="Recibe recomendaciones personalizadas de personas reales, basados en tus gustos y emociones, no solo en estadísticas."
+        />
 
-    <article>
+        <Funcion
+          titulo="4. Grupos de afinidad musical"
+          descripcion="Únete a grupos según tus géneros favoritos o a tus estados de ánimo. Participa en foros y charlas con quienes vibran igual."
+        />
 
-      <section class="text-center ">
-        <section>
-          <h2 class="font-h text-5xl p-2">Funcionalidades</h2>
-        </section>
+        <Funcion
+          titulo="5. Eventos y actividades online"
+          descripcion="Participa en escuchas grupales, reviews de álbunes, trivias musicales, retos de playlist y más."
+        />
 
-        <em class=" not-italic font-p font-extralight text-2xl ">Conecta, comparte y experimenta la música de manera diferente</em>
-
+        <Funcion
+          titulo="6. Mensajería y conexiones"
+          descripcion="Conoce gente que comparte tu pasión, comparte mensajes privados o deja comentarios en perfiles y playlists."
+        />
       </section>
-
-      <section class=" grid grid-cols-2 gap-4 px-35 py-15 whitespace-normal break-words">
-      
-        <section class="bg-[#530b0c] rounded-lg px-5 py-6">
-          <h3 class="text-center text-xl">1. Perfiles musicales personalizados</h3>
-          <p class="text-justify">
-            Crea tu perfil, selecciona tus géneros, artistas y canciones favoritas.
-            Haz visible tu personalidad a través de tu música.
-          </p>
-        </section>
-
-        <section class="bg-[#530b0c] rounded-lg px-5 py-6">
-          <h3 class="text-center text-xl">2.Creación y descubrimiento de playlists</h3>
-          <p class="text-justify">
-            Arma tus propias playlists, decúbrelas hechas por otros usuarios y 
-            compártelos con la comunidad. 
-          </p>
-        </section>
-
-        <section class="bg-[#530b0c] rounded-lg px-5 py-6">
-          <h3 class="text-center text-xl">3. Recomendaciones humanas</h3>
-          <p class="text-justify">
-            Recibe recomendaciones personalizadas de personas reales, basados 
-            en tus gustos y emociones, no solo en estadísticas.
-          </p>
-        </section>
-
-        <section class="bg-[#530b0c] rounded-lg px-5 py-6">
-          <h3 class="text-center text-xl">4. Grupos de afinidad musical</h3>
-          <p class="text-justify">
-            Únete a grupos según tus géneros favoritos o a tus estados de ánimo.
-            Participa en foros y charlas con quienes vibran igual.
-          </p>      
-        </section>
-
-        <section class="bg-[#530b0c] rounded-lg px-5 py-6">
-          <h3 class="text-center text-xl">5. Eventos y actividades online</h3>
-          <p class="text-justify">
-            Participa en escuchas grupales, reviews de álbunes, trivias musicales, retos de playlist y más.
-          </p>
-        </section>
-
-        <section class="bg-[#530b0c] rounded-lg px-5 py-6">
-          <h3 class="text-center text-xl">6. Mensajería y conexiones</h3>
-          <p class="text-justify">
-            Conoce gente que comparte tu pasión, comparte mensajes privados o deja 
-            comentarios en perfiles y playlists.
-          </p>
-        </section>
-      </section>
-
     </article>
-
-  </section>
-
+  </div>
 </section>
 
-
-
-
-
-
-
-<!-- Leonard: Carrusel -->
+<!-- Trabajo de Leonard -->
 <div
-  class="bg-black flex flex-col items-center justify-start px-4 md:px-24 py-8 w-full"
+  class="bg-black flex flex-col items-center justify-start px-4 md:px-24 lg:px-48 py-8 w-full"
 >
   <div class="container mx-auto">
     <h1
