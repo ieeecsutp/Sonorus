@@ -3,16 +3,15 @@
 ---
 
 <!-- Parte de Piero -->
-<header
-  class="bg-black text-white flex w-full justify-between lg:px-24"
-  id="inicio"
->
-  <div class="container mx-auto flex flex-row w-full">
+<header class="bg-black text-white flex w-full justify-between">
+  <div class="md:container mx-auto flex flex-row w-full md:px-16 lg:px-48">
     <!-- Mobile Version -->
-    <div class="relative w-full flex items-center justify-between px-4 py-2">
+    <div
+      class="relative w-full flex items-center justify-between px-2 lg:px-0 py-2"
+    >
       <!-- Logo -->
       <a href="#inicio" class="font-h flex items-center font-bold text-2xl">
-        <img src="/logo.webp" alt="Logo" class="h-15 w-auto" />
+        <img src="/logo.webp" alt="Logo" class="h-15 w-auto" loading="lazy" />
         Sonorus
       </a>
 
@@ -22,9 +21,10 @@
         alt="menu"
         class="h-8 cursor-pointer md:hidden"
         id="menu"
+        loading="lazy"
       />
       <nav
-        class="absolute top-full left-0 w-full bg-black hidden md:hidden"
+        class="absolute top-full left-0 w-screen bg-black hidden md:hidden"
         id="dropmenu"
       >
         <ul class="text-center space-y-4 py-4">
@@ -37,8 +37,8 @@
 
     <!-- Desktop Version -->
 
-    <nav class="hidden md:flex items-center justify-end w-full px-6">
-      <ul class="flex gap-5">
+    <nav class="hidden md:flex items-center justify-end w-full font-p text-sm">
+      <ul class="flex gap-3">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#queessonorus">¿Que es Sonorus?</a></li>
         <li><a href="#funcionalidades">Funcionalidades</a></li>

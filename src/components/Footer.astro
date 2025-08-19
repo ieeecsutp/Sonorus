@@ -6,7 +6,9 @@
 <div
   class="bg-[#1C1111] flex flex-col items-center justify-start px-4 md:px-24 py-8 w-full"
 >
-  <div class="container mx-auto flex flex-col justify-center items-center">
+  <div
+    class="container mx-auto flex flex-col justify-center items-center lg:px-48"
+  >
     <h1
       class="text-white text-center font-bold text-2xl md:text-[32px] w-full font-inria"
     >
@@ -22,9 +24,10 @@
     <button
       class="py-3 px-6 md:px-10 bg-white text-black rounded-full gap-3 cursor-pointer flex items-center font-p transition duration-300 transform hover:scale-105 mt-5"
       >Únete a la comunidad<img
-        src="/iconForButton.svg"
+        src="/iconForButtonBlack.svg"
         alt="icono"
         class="w-auto h-5 transition-transform duration-300"
+        loading="eager"
       />
     </button>
     <div class="w-full h-[2px] bg-white/30 my-6"></div>
@@ -36,7 +39,12 @@
         href="#inicio"
         class="font-h flex items-center font-bold text-xl md:text-2xl text-white"
       >
-        <img src="/logo.webp" alt="Logo" class="h-10 md:h-16 w-auto mr-2" />
+        <img
+          src="/logo.webp"
+          alt="Logo"
+          class="h-10 md:h-16 w-auto mr-2"
+          loading="lazy"
+        />
         Sonorus
       </a>
       <div
@@ -49,6 +57,7 @@
           href="https://facebook.com"
           target="_blank"
           class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform duration-300"
+          aria-label="Facebook"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -66,6 +75,7 @@
           href="https://linkedin.com"
           target="_blank"
           class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform duration-300"
+          aria-label="LinkedIn"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -80,9 +90,10 @@
           </svg>
         </a>
         <a
-          href="https://twitter.com"
+          href="https://x.com"
           target="_blank"
           class="w-10 h-10 md:w-14 md:h-14 rounded-full bg-white flex items-center justify-center hover:scale-110 transition-transform duration-300"
+          aria-label="x (Twitter)"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
