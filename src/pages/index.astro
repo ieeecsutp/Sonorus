@@ -10,6 +10,62 @@ import Layout from "../layouts/Layout.astro";
   <Main />
   <Footer />
   <script>
+    /* JS para formulario de registro comunidad (Main y Footer) */
+    document.addEventListener('DOMContentLoaded', () => {
+      // Main
+      const joinBtn = document.getElementById('join-community-btn');
+      const modal = document.getElementById('community-form-modal');
+      const closeBtn = document.getElementById('close-form-btn');
+      if (joinBtn && modal && closeBtn) {
+        joinBtn.addEventListener('click', () => {
+          modal.classList.remove('hidden');
+        });
+        closeBtn.addEventListener('click', () => {
+          modal.classList.add('hidden');
+        });
+        modal.addEventListener('click', (e) => {
+          if (e.target === modal) {
+            modal.classList.add('hidden');
+          }
+        });
+        const form = modal.querySelector('form');
+        if (form) {
+          form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Registro enviado!');
+            modal.classList.add('hidden');
+            form.reset();
+          });
+        }
+      }
+
+      // Footer
+      const joinBtnFooter = document.getElementById('join-community-btn-footer');
+      const modalFooter = document.getElementById('community-form-modal-footer');
+      const closeBtnFooter = document.getElementById('close-form-btn-footer');
+      if (joinBtnFooter && modalFooter && closeBtnFooter) {
+        joinBtnFooter.addEventListener('click', () => {
+          modalFooter.classList.remove('hidden');
+        });
+        closeBtnFooter.addEventListener('click', () => {
+          modalFooter.classList.add('hidden');
+        });
+        modalFooter.addEventListener('click', (e) => {
+          if (e.target === modalFooter) {
+            modalFooter.classList.add('hidden');
+          }
+        });
+        const formFooter = modalFooter.querySelector('form');
+        if (formFooter) {
+          formFooter.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('¡Registro enviado!');
+            modalFooter.classList.add('hidden');
+            formFooter.reset();
+          });
+        }
+      }
+    });
     /* Código para Menú */
     const menu = document.getElementById("menu") as HTMLImageElement;
     const dropmenu = document.getElementById("dropmenu");
