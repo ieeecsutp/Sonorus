@@ -1,10 +1,18 @@
-# Landing Page - Sonorus
 
-## Tema y descripción del proyecto
+<h1 style="Color:#16B7A5">Sonorus</h1>
 
 Sonorus es una plataforma creada para conectar personas a través de sus pasiones musicales, promoviendo el encuentro auténtico y el descubrimiento de nuevas perspectivas y vínculos sonoros y emocionales. Aquí la música trasciende como experiencia individual para convertirse en puente de construcción comunitaria, facilitando conexiones significativas entre usuarios.
 
-## Tecnologías utilizadas
+<h2 style="Color:#16B7A5">¿Por qué este proyecto?</h2>
+
+Este proyecto fue creado como una práctica inicial para aprender los fundamentos de lenguajes y herramientas en el desarrollo web.
+
+<h2 style="Color:#0088EE">Vista Previa</h2>
+
+[Sonorus-Desktop version](public/Web-Sonorus-Screenshot.jpeg "Click para visualizar")
+
+
+<h2 style="Color:#16B7A5">Tecnologías utilizadas</h2>
 
 - HTML
 - CSS
@@ -12,29 +20,48 @@ Sonorus es una plataforma creada para conectar personas a través de sus pasione
 - JavaScript
 - AstroJS
 
-## Vista previa
+<h2 style="Color:#16B7A5">Requisitos técnicos</h2>
 
--- Aún en desarrollo --
+***Herramientas:***
 
-## Requisitos técnicos
+- Visual Studio Code (v1.103.1)
+- Node.js (v22.18.0 x64)
+- Extensión Tailwind CSS IntelliSense (v0.14.26)
+- Figma (Web version)
 
-**Herramientas:**
-
-- Visual Studio Code
-- Node.js
-- Extensión Tailwind CSS IntelliSense
-- Figma
-
-**Instalación:**
+***Instalación (Node.js):***
 
 ```bash
 npm install (Instalar dependencias)
 npm run dev (Ejecutar el proyecto en un puerto local)
 ```
 
-## Diseño
+<h2 style="Color:#16B7A5">Diseño</h2>
 
-El prototipo de Figma es la siguiente:
-[https://www.figma.com/design/AGnKm6N53MYf6uHM56T2vZ/Proyecto-Sonorus?node-id=34-6&p=f&t=9Zvpz7caAaiQltNj-0]
+Prototipo en Figma:  
+[Sonorus](https://www.figma.com/design/AGnKm6N53MYf6uHM56T2vZ/Proyecto-Sonorus?node-id=34-6&p=f&t=9Zvpz7caAaiQltNj-0 "Click para ir a la página")
 
-El archivo ".fig" está ubicado en `src/resources/sonorus.fig`
+Ubicación en el repositorio:  
+`src/resources/sonorus.fig`
+
+<h2 style="Color:#16B7A5">Contribuir</h2>
+
+¡Contribuciones son bienvenidas! Si tienes ideas para mejorar sigue estos pasos:
+
+1- Haz un fork de este repositorio  
+2- Crea una nueva rama para tus cambio: 
+```bash
+git checkout nombre-de-la-rama
+```
+3- Realiza tus cambios y haz un commit:
+```bash
+git commit -m "Comentario para este commit"
+```
+4- Envía un pull request.
+
+<h2 style="Color:#16B7A5">Desarrolladores</h2>
+
+- Piero Benigno   
+- Leonard Tomas  
+- Angel Obispo   
+
