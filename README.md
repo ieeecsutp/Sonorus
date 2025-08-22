@@ -9,8 +9,13 @@ Este proyecto fue creado como una práctica inicial para aprender los fundamento
 
 <h2 style="Color:#0088EE">Vista Previa</h2>
 
+***Imagen***
+
 [Sonorus-Desktop version](public/Web-Sonorus-Screenshot.jpeg "Click para visualizar")
 
+***Video***
+
+[Sonorus-Video](https://utpedupe-my.sharepoint.com/:v:/g/personal/0910336_utp_edu_pe/Eb2CwSwwSM5Kt9AfijzSphwBWTFcWZlDFXuIAoPH8xgxuA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=eXbnl7 "Click para ir al enlace")
 
 <h2 style="Color:#16B7A5">Tecnologías utilizadas</h2>
 
