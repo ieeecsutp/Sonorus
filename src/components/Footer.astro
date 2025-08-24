@@ -31,34 +31,77 @@
         loading="eager"
       />
     </button>
-      <!-- Formulario de registro oculto para el footer -->
-      <div id="community-form-modal-footer" class="fixed inset-0 bg-black/70 flex items-center justify-center z-50 hidden">
-        <form class="bg-gradient-to-br from-[#831011] via-[#300000] to-[#831011] p-8 rounded-2xl shadow-lg w-full max-w-md flex flex-col gap-5 text-white font-p relative">
-          <button type="button" id="close-form-btn-footer" class="absolute top-4 right-4 text-white bg-black/40 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-all">✕</button>
-          <h2 class="text-2xl md:text-3xl font-bold font-h mb-2 text-center">Regístrate en la comunidad</h2>
-          <label class="flex flex-col gap-1">
-            <span class="font-semibold">Nombre</span>
-            <input type="text" name="nombre" required class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p" />
-          </label>
-          <label class="flex flex-col gap-1">
-            <span class="font-semibold">Edad</span>
-            <input type="number" name="edad" min="1" required class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p" />
-          </label>
-          <label class="flex flex-col gap-1">
-            <span class="font-semibold">Gustos musicales</span>
-            <input type="text" name="gustos" required placeholder="Rock, Pop, Jazz..." class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p" />
-          </label>
-          <label class="flex flex-col gap-1">
-            <span class="font-semibold">País</span>
-            <input type="text" name="pais" required class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p" />
-          </label>
-          <label class="flex flex-col gap-1">
-            <span class="font-semibold">Recomendaciones</span>
-            <textarea name="recomendaciones" rows="3" placeholder="¿Qué música recomiendas?" class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p"></textarea>
-          </label>
-          <button type="submit" class="py-3 px-6 bg-black text-white rounded-full font-p font-bold hover:scale-105 transition duration-300">Enviar</button>
-        </form>
-      </div>
+    <!-- Formulario de registro oculto para el footer -->
+    <div
+      id="community-form-modal-footer"
+      class="fixed inset-0 bg-black/70 items-center justify-center z-50 hidden"
+    >
+      <form
+        class="bg-gradient-to-br from-[#831011] via-[#300000] to-[#831011] p-8 rounded-2xl shadow-lg w-full max-w-md flex flex-col gap-5 text-white font-p relative"
+      >
+        <button
+          type="button"
+          id="close-form-btn-footer"
+          class="absolute top-4 right-4 text-white bg-black/40 rounded-full w-8 h-8 flex items-center justify-center hover:bg-black/70 transition-all"
+          >✕</button
+        >
+        <h2 class="text-2xl md:text-3xl font-bold font-h mb-2 text-center">
+          Regístrate en la comunidad
+        </h2>
+        <label class="flex flex-col gap-1">
+          <span class="font-semibold">Nombre</span>
+          <input
+            type="text"
+            name="nombre"
+            required
+            class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p"
+          />
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="font-semibold">Edad</span>
+          <input
+            type="number"
+            name="edad"
+            min="1"
+            required
+            class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p"
+          />
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="font-semibold">Gustos musicales</span>
+          <input
+            type="text"
+            name="gustos"
+            required
+            placeholder="Rock, Pop, Jazz..."
+            class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p"
+          />
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="font-semibold">País</span>
+          <input
+            type="text"
+            name="pais"
+            required
+            class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p"
+          />
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="font-semibold">Recomendaciones</span>
+          <textarea
+            name="recomendaciones"
+            rows="3"
+            placeholder="¿Qué música recomiendas?"
+            class="py-2 px-4 rounded-lg bg-black/30 text-white border border-[#831011] focus:outline-none focus:ring-2 focus:ring-[#831011] font-p"
+          ></textarea>
+        </label>
+        <button
+          type="submit"
+          class="py-3 px-6 bg-black text-white rounded-full font-p font-bold hover:scale-105 transition duration-300"
+          >Enviar</button
+        >
+      </form>
+    </div>
     <div class="w-full h-[2px] bg-white/30 my-6"></div>
 
     <div
