@@ -10,63 +10,8 @@ import Layout from "../layouts/Layout.astro";
   <Main />
   <Footer />
   <script>
-    /* JS para formulario de registro comunidad (Main y Footer) */
-    document.addEventListener('DOMContentLoaded', () => {
-      // Main
-      const joinBtn = document.getElementById('join-community-btn');
-      const modal = document.getElementById('community-form-modal');
-      const closeBtn = document.getElementById('close-form-btn');
-      if (joinBtn && modal && closeBtn) {
-        joinBtn.addEventListener('click', () => {
-          modal.classList.remove('hidden');
-        });
-        closeBtn.addEventListener('click', () => {
-          modal.classList.add('hidden');
-        });
-        modal.addEventListener('click', (e) => {
-          if (e.target === modal) {
-            modal.classList.add('hidden');
-          }
-        });
-        const form = modal.querySelector('form');
-        if (form) {
-          form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('¡Registro enviado!');
-            modal.classList.add('hidden');
-            form.reset();
-          });
-        }
-      }
-
-      // Footer
-      const joinBtnFooter = document.getElementById('join-community-btn-footer');
-      const modalFooter = document.getElementById('community-form-modal-footer');
-      const closeBtnFooter = document.getElementById('close-form-btn-footer');
-      if (joinBtnFooter && modalFooter && closeBtnFooter) {
-        joinBtnFooter.addEventListener('click', () => {
-          modalFooter.classList.remove('hidden');
-        });
-        closeBtnFooter.addEventListener('click', () => {
-          modalFooter.classList.add('hidden');
-        });
-        modalFooter.addEventListener('click', (e) => {
-          if (e.target === modalFooter) {
-            modalFooter.classList.add('hidden');
-          }
-        });
-        const formFooter = modalFooter.querySelector('form');
-        if (formFooter) {
-          formFooter.addEventListener('submit', (e) => {
-            e.preventDefault();
-            alert('¡Registro enviado!');
-            modalFooter.classList.add('hidden');
-            formFooter.reset();
-          });
-        }
-      }
-    });
-    /* Código para Menú */
+    /* Parte de Piero */
+    //Código para el menú desplegable - Funcionalidad
     const menu = document.getElementById("menu") as HTMLImageElement;
     const dropmenu = document.getElementById("dropmenu");
 
@@ -82,9 +27,16 @@ import Layout from "../layouts/Layout.astro";
         menu.src = "/menu.svg";
       });
     });
-    /* JS Leonard para carrusel*/
-    // Carrusel funcionalidad
-    const images = [
+
+    /* Parte de Leonard */
+
+    // Para carrusel de álbumes - Funcionalidad
+    interface ImageData {
+      src: string;
+      alt: string;
+    }
+
+    const images: ImageData[] = [
       { src: "/album_1.webp", alt: "Nirvana" },
       { src: "/album_2.webp", alt: "Bocanada" },
       { src: "/album_3.webp", alt: "Red Hot Chili Peppers" },
@@ -96,13 +48,21 @@ import Layout from "../layouts/Layout.astro";
 
     let currentIndex = 0;
 
-    const carousel = document.getElementById("carousel");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
+    // Forzamos el tipo correcto de cada elemento
+    const carousel = document.getElementById(
+      "carousel"
+    ) as HTMLDivElement | null;
+    const prevBtn = document.getElementById(
+      "prevBtn"
+    ) as HTMLButtonElement | null;
+    const nextBtn = document.getElementById(
+      "nextBtn"
+    ) as HTMLButtonElement | null;
 
-    // Renderiza todas las imágenes en línea, pero solo se ven dos a la vez gracias al overflow-hidden del contenedor
     function renderCarousel() {
+      if (!carousel) return; // prevención de null
       carousel.innerHTML = "";
+
       images.forEach((imgData) => {
         const img = document.createElement("img");
         img.src = imgData.src;
@@ -112,30 +72,113 @@ import Layout from "../layouts/Layout.astro";
         img.style.height = "197px";
         carousel.appendChild(img);
       });
+
       updateTransform();
     }
 
     function updateTransform() {
-      // 140px (ancho) + 16px (gap-4) = 156px por imagen
+      if (!carousel) return;
+      // 140px + 16px (gap) = 156px
       const offset = currentIndex * 156;
       carousel.style.transform = `translateX(-${offset}px)`;
     }
 
-    prevBtn.addEventListener("click", () => {
+    prevBtn?.addEventListener("click", () => {
       if (currentIndex - 2 >= 0) {
         currentIndex -= 2;
         updateTransform();
       }
     });
 
-    nextBtn.addEventListener("click", () => {
+    nextBtn?.addEventListener("click", () => {
       if (currentIndex + 2 < images.length) {
         currentIndex += 2;
         updateTransform();
       }
     });
 
-    // Inicializar carrusel
+    // Inicializar
     renderCarousel();
+
+    // Formulario de registro comunidad (Main y Footer) - Funcionalidad
+    document.addEventListener("DOMContentLoaded", () => {
+      // Main
+      const joinBtnMain = document.getElementById(
+        "join-community-btn"
+      ) as HTMLButtonElement | null;
+      const modalMain = document.getElementById(
+        "community-form-modal"
+      ) as HTMLDivElement | null;
+      const closeBtnMain = document.getElementById(
+        "close-form-btn"
+      ) as HTMLButtonElement | null;
+
+      if (joinBtnMain && modalMain && closeBtnMain) {
+        joinBtnMain.addEventListener("click", () => {
+          modalMain.classList.remove("hidden");
+          modalMain.classList.add("flex");
+        });
+
+        closeBtnMain.addEventListener("click", () => {
+          modalMain.classList.add("hidden");
+          modalMain.classList.remove("flex");
+        });
+
+        modalMain.addEventListener("click", (e) => {
+          if (e.target === modalMain) {
+            modalMain.classList.add("hidden");
+            modalMain.classList.remove("flex");
+          }
+        });
+
+        const formMain = modalMain.querySelector("form");
+        formMain?.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("¡Registro enviado!");
+          modalMain.classList.add("hidden");
+          modalMain.classList.remove("flex");
+          formMain.reset();
+        });
+      }
+
+      // Footer
+      const joinBtnFooter = document.getElementById(
+        "join-community-btn-footer"
+      ) as HTMLButtonElement | null;
+      const modalFooter = document.getElementById(
+        "community-form-modal-footer"
+      ) as HTMLDivElement | null;
+      const closeBtnFooter = document.getElementById(
+        "close-form-btn-footer"
+      ) as HTMLButtonElement | null;
+
+      if (joinBtnFooter && modalFooter && closeBtnFooter) {
+        joinBtnFooter.addEventListener("click", () => {
+          modalFooter.classList.remove("hidden");
+          modalFooter.classList.add("flex");
+        });
+
+        closeBtnFooter.addEventListener("click", () => {
+          modalFooter.classList.add("hidden");
+          modalFooter.classList.remove("flex");
+        });
+
+        modalFooter.addEventListener("click", (e) => {
+          if (e.target === modalFooter) {
+            modalFooter.classList.add("hidden");
+            modalFooter.classList.remove("flex");
+          }
+        });
+
+        const formFooter = modalFooter.querySelector("form");
+        formFooter?.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("¡Registro enviado!");
+          modalFooter.classList.add("hidden");
+          modalFooter.classList.remove("flex");
+          formFooter.reset();
+        });
+      }
+    });
   </script>
 </Layout>
