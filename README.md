@@ -15,7 +15,7 @@ Este proyecto fue creado como una práctica inicial para aprender los fundamento
 
 ***Video***
 
-[Sonorus-Video](https://utpedupe-my.sharepoint.com/:v:/g/personal/0910336_utp_edu_pe/Eb2CwSwwSM5Kt9AfijzSphwBWTFcWZlDFXuIAoPH8xgxuA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=eXbnl7 "Click para ir al enlace")
+[Sonorus-Video](https://1drv.ms/v/c/1c8d62a8192a1994/ET8Ao_2GJ8RDgTqVgeOTQWwBtVJySYd18aBS4vxoUGEb4Q?e=KbZiNX "Click para ir al enlace")
 
 <h2 style="Color:#16B7A5">Tecnologías utilizadas</h2>
 
