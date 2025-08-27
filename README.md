@@ -15,7 +15,9 @@ Este proyecto fue creado como una práctica inicial para aprender los fundamento
 
 ***Video***
 
-[Sonorus-Video](https://1drv.ms/v/c/1c8d62a8192a1994/ET8Ao_2GJ8RDgTqVgeOTQWwBtVJySYd18aBS4vxoUGEb4Q?e=KbZiNX "Click para ir al enlace")
+[Sonorus-Video](https://1drv.ms/v/c/1c8d62a8192a1994/ET8Ao_2GJ8RDgTqVgeOTQWwB4RfZmxI5bT7a-metrxhmZA?e=SQXDZm "Click para ir al enlace")
+
+
 
 <h2 style="Color:#16B7A5">Tecnologías utilizadas</h2>
 
